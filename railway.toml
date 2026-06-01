@@ -1,0 +1,19 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "npm run build"
+installCommand = "npm install"
+
+[build.env]
+NIXPACKS_NODE_VERSION = "20"
+NIXPACKS_INSTALL_CMD = "npm install"
+
+[deploy]
+startCommand = "npm run start"
+healthcheckPath = "/login"
+healthcheckTimeout = 100
+restartPolicyType = "ON_FAILURE"
+maxRestartCount = 3
+
+[services.db]
+# Esta sección es informativa si decides usar el plugin de MySQL de Railway
+# Railway inyectará automáticamente MYSQLHOST, MYSQLPORT, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE
