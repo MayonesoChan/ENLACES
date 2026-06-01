@@ -199,3 +199,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Texture pattern for login background */
+@layer utilities {
+  .bg-texture {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.08) 0.5px, transparent 0.5px),
+      linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0.02)),
+      linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0.02));
+    background-size: 50px 50px, 40px 40px, 40px 40px;
+    background-position: 0 0, 0 0, 20px 20px;
+  }
+
+  .dark .bg-texture {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.12) 0.5px, transparent 0.5px),
+      linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.03) 75%, rgba(255, 255, 255, 0.03)),
+      linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.03) 75%, rgba(255, 255, 255, 0.03));
+    background-size: 50px 50px, 40px 40px, 40px 40px;
+    background-position: 0 0, 0 0, 20px 20px;
+  }
+}
