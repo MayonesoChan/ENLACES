@@ -32,21 +32,32 @@ export default function LoginPage() {
 
       <div className="w-full max-w-md relative z-10">
         {/* Header with logo */}
-        <div className="mb-12 flex justify-center">
-          {companyLogo ? (
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <img
-                src={companyLogo}
-                alt="Company Logo"
-                className="h-32 w-auto object-contain drop-shadow-lg relative"
-              />
-            </div>
-          ) : (
-            <div className="flex size-24 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-3xl">
-              FDX
-            </div>
-          )}
+        <div className="mb-10 text-center space-y-4">
+          <div className="flex justify-center">
+            {companyLogo ? (
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <img
+                  src={companyLogo}
+                  alt="Company Logo"
+                  className="h-32 w-auto object-contain drop-shadow-lg relative"
+                />
+              </div>
+            ) : (
+              <div className="flex size-24 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-3xl">
+                FDX
+              </div>
+            )}
+          </div>
+          
+          <div className="space-y-1.5">
+            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
+              Inicie sesión con su cuenta
+            </h1>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              para acceder al sistema
+            </p>
+          </div>
         </div>
 
         {/* Login Form Card */}
