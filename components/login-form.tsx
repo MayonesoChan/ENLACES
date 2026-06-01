@@ -68,14 +68,9 @@ export function LoginForm() {
 
       {/* Password Field */}
       <div className="space-y-2.5">
-        <div className="flex items-center justify-between">
-          <Label htmlFor="password" className="text-sm font-semibold text-foreground">
-            Contraseña
-          </Label>
-          <a href="#" className="text-xs text-primary hover:text-primary/80 font-medium transition-colors">
-            ¿Olvidaste?
-          </a>
-        </div>
+        <Label htmlFor="password" className="text-sm font-semibold text-foreground">
+          Contraseña
+        </Label>
         <Input
           id="password"
           type="password"
